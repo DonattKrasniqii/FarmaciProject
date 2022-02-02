@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="11e20fc3-6ae9-4db9-807a-161135d497ef" name="Default Changelist" comment="Fixed Index Pagination">
+      <change afterPath="$PROJECT_DIR$/app/Console/Commands/SendSlackInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Exports/PaymentsExport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/JiraController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/ActivityStatusOfUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/PreventNotActiveUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Imports/DrugsImport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Notifications/GeneralInfoSlackScheduler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Notifications/JuniorParrotAPI.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Notifications/SlackMessageAPI.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_22_160248_add_last_seen_to_users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_07_02_152407_add_is_active_to_users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/jiraBugsNotifier.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.03351400 1625147190.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.12805400 1624397825.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.13191300 1624397895.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.19811600 1624397703.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.23036500 1625169375.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.36350700 1625170721.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.44192600 1624222937.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.61455600 1625169936.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.61965100 1625350785.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.62727200 1625350511.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.72228900 1624384493.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.72975800 1624222937.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.75750000 1624358574.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.79231500 1624981594.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/0.87370600 1625169998.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624222525.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624222629.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624222719.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624222851.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624268945.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624289558.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624290015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624306083.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624306118.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624306154.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624357566.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624357610.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624360956.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624379188.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624384471.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624397673.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1624981531.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1625146735.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1625146778.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1625147174.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1625169026.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1625169477.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1625169690.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1625170822.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/images/1625308095.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/laravel-excel/laravel-excel-RTDFTZzlT6NmxN2p88e7mrjDeTwFa9Bj.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Farmaci.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Farmaci.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/DeleteBuriedData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/DeleteBuriedData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DrugsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DrugsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/SendNotification.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/TestJob.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Drug.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Drug.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/BlogRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BlogRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ContactMessagesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ContactMessagesRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/DrugRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/DrugRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/PaymentsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PaymentsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/drug-filters.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/drug-filters.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/templates/auth/auth.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/auth/auth.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/blog.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/drug-stores.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/drug-stores.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/drugs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/drugs.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/panel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/panel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/payments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/payments.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/profileViews.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/web-dashboard/partials/profileViews.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/templates/web/contact/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/web/contact/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/modules/web-dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/modules/web-dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/mews/captcha" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/laravel/slack-notification-channel" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1qWMxfslbtXhayt8rUTvW560EH2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Farmaci\public\assets\ads" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <branch name="main" repository="C:\xampp\htdocs\Farmaci" />
+      <changelist id="11e20fc3-6ae9-4db9-807a-161135d497ef" name="Default Changelist" comment="" />
+      <created>1617191140939</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623762026752</updated>
+      <workItem from="1617191141987" duration="201000" />
+      <workItem from="1617191403962" duration="5845000" />
+      <workItem from="1617198203285" duration="2192000" />
+      <workItem from="1618665818227" duration="25158000" />
+      <workItem from="1618733902966" duration="15823000" />
+      <workItem from="1618817158624" duration="9000" />
+      <workItem from="1619008035972" duration="4000" />
+      <workItem from="1619015994994" duration="2956000" />
+      <workItem from="1619019501365" duration="391000" />
+      <workItem from="1619075339349" duration="83000" />
+      <workItem from="1619083774556" duration="1930000" />
+      <workItem from="1619087134129" duration="3156000" />
+      <workItem from="1619255703344" duration="8154000" />
+      <workItem from="1619298301091" duration="1615000" />
+      <workItem from="1619339459601" duration="2905000" />
+      <workItem from="1619360075607" duration="407000" />
+      <workItem from="1619360727569" duration="1008000" />
+      <workItem from="1619421764045" duration="12000" />
+      <workItem from="1619533774782" duration="83000" />
+      <workItem from="1619553551561" duration="1753000" />
+      <workItem from="1619593316894" duration="9000" />
+      <workItem from="1619595690749" duration="102000" />
+      <workItem from="1619623040735" duration="1279000" />
+      <workItem from="1619624427489" duration="1289000" />
+      <workItem from="1619680608624" duration="9000" />
+      <workItem from="1619691344530" duration="291000" />
+      <workItem from="1619694523391" duration="14000" />
+      <workItem from="1619696229311" duration="1724000" />
+      <workItem from="1619698251472" duration="10000" />
+      <workItem from="1619698410381" duration="143000" />
+      <workItem from="1619708384262" duration="462000" />
+      <workItem from="1619772555708" duration="17000" />
+      <workItem from="1619906243178" duration="6572000" />
+      <workItem from="1619971507018" duration="3482000" />
+      <workItem from="1620041781352" duration="670000" />
+      <workItem from="1620117359162" duration="1922000" />
+      <workItem from="1620140207248" duration="7662000" />
+      <workItem from="1620199926688" duration="261000" />
+      <workItem from="1620200726557" duration="13000" />
+      <workItem from="1620202992843" duration="34000" />
+      <workItem from="1620333310642" duration="259000" />
+      <workItem from="1620334249433" duration="1772000" />
+      <workItem from="1620372809553" duration="28000" />
+      <workItem from="1620746023278" duration="343000" />
+      <workItem from="1620746519345" duration="847000" />
+      <workItem from="1620843743691" duration="10524000" />
+      <workItem from="1621073434090" duration="2534000" />
+      <workItem from="1621088933064" duration="4486000" />
+      <workItem from="1621234939222" duration="11000" />
+      <workItem from="1621246131231" duration="694000" />
+      <workItem from="1621442639812" duration="417000" />
+      <workItem from="1621443075752" duration="1419000" />
+      <workItem from="1621491420952" duration="160000" />
+      <workItem from="1621714594229" duration="2172000" />
+      <workItem from="1622222804823" duration="48000" />
+      <workItem from="1622485144062" duration="2232000" />
+      <workItem from="1622537868926" duration="8566000" />
+      <workItem from="1622563357971" duration="12800000" />
+      <workItem from="1622634286890" duration="6072000" />
+      <workItem from="1622646291570" duration="4044000" />
+      <workItem from="1622654189590" duration="3406000" />
+      <workItem from="1622658945785" duration="6373000" />
+      <workItem from="1622665723943" duration="711000" />
+      <workItem from="1622666660338" duration="79000" />
+      <workItem from="1622711188659" duration="10792000" />
+      <workItem from="1622734980781" duration="3977000" />
+      <workItem from="1622753151636" duration="237000" />
+      <workItem from="1622753402860" duration="3583000" />
+      <workItem from="1622806734144" duration="6804000" />
+      <workItem from="1622823232246" duration="6228000" />
+      <workItem from="1622838038622" duration="1633000" />
+      <workItem from="1622885652594" duration="1456000" />
+      <workItem from="1622893887792" duration="1506000" />
+      <workItem from="1622904475476" duration="3254000" />
+      <workItem from="1622921953607" duration="2147000" />
+      <workItem from="1622927304376" duration="848000" />
+      <workItem from="1622976016692" duration="5315000" />
+      <workItem from="1622987192901" duration="2708000" />
+      <workItem from="1622995910866" duration="1296000" />
+      <workItem from="1623003382437" duration="618000" />
+      <workItem from="1623006569904" duration="2540000" />
+      <workItem from="1623061771054" duration="3769000" />
+      <workItem from="1623084302257" duration="6665000" />
+      <workItem from="1623091575705" duration="2388000" />
+      <workItem from="1623095187474" duration="1390000" />
+      <workItem from="1623101718794" duration="6381000" />
+      <workItem from="1623151723247" duration="1347000" />
+      <workItem from="1623161156320" duration="4884000" />
+      <workItem from="1623173382213" duration="2677000" />
+      <workItem from="1623177546395" duration="1257000" />
+      <workItem from="1623186436171" duration="5586000" />
+      <workItem from="1623193326313" duration="2744000" />
+      <workItem from="1623237672302" duration="4678000" />
+      <workItem from="1623245061930" duration="1799000" />
+      <workItem from="1623250682401" duration="998000" />
+      <workItem from="1623260198003" duration="2624000" />
+      <workItem from="1623265664642" duration="511000" />
+      <workItem from="1623268840800" duration="901000" />
+      <workItem from="1623309698352" duration="343000" />
+      <workItem from="1623314676887" duration="2167000" />
+      <workItem from="1623339242942" duration="4408000" />
+      <workItem from="1623423909601" duration="710000" />
+      <workItem from="1623575581481" duration="5018000" />
+      <workItem from="1623586044302" duration="3738000" />
+      <workItem from="1623668371213" duration="7629000" />
+      <workItem from="1623688992974" duration="3594000" />
+      <workItem from="1623750317288" duration="88000" />
+      <workItem from="1623761592897" duration="91000" />
+      <workItem from="1623761699947" duration="293000" />
+      <workItem from="1623762027251" duration="6069000" />
+      <workItem from="1623787909818" duration="2969000" />
+      <workItem from="1623844269114" duration="5133000" />
+      <workItem from="1623855914367" duration="1119000" />
+      <workItem from="1623860552340" duration="1354000" />
+      <workItem from="1623865133325" duration="1398000" />
+      <workItem from="1623873070264" duration="1842000" />
+      <workItem from="1623878673096" duration="751000" />
+      <workItem from="1624043563932" duration="11105000" />
+      <workItem from="1624100929518" duration="11054000" />
+      <workItem from="1624126060027" duration="1670000" />
+      <workItem from="1624142994480" duration="1343000" />
+      <workItem from="1624188029381" duration="419000" />
+      <workItem from="1624197769669" duration="1746000" />
+      <workItem from="1624202021982" duration="9588000" />
+      <workItem from="1624260515128" duration="8138000" />
+      <workItem from="1624289319948" duration="1197000" />
+      <workItem from="1624305838549" duration="6405000" />
+      <workItem from="1624356931713" duration="7340000" />
+      <workItem from="1624370488071" duration="2996000" />
+      <workItem from="1624376863503" duration="2488000" />
+      <workItem from="1624384230242" duration="5160000" />
+      <workItem from="1624396769364" duration="2872000" />
+      <workItem from="1624452392267" duration="516000" />
+      <workItem from="1624455402762" duration="753000" />
+      <workItem from="1624456294357" duration="755000" />
+      <workItem from="1624565279730" duration="1424000" />
+      <workItem from="1624618285256" duration="2793000" />
+      <workItem from="1624812382152" duration="2781000" />
+      <workItem from="1624879973833" duration="12511000" />
+      <workItem from="1624977771509" duration="2189000" />
+      <workItem from="1625005617040" duration="2439000" />
+      <workItem from="1625067836865" duration="11000" />
+      <workItem from="1625067977284" duration="3098000" />
+      <workItem from="1625130380685" duration="7071000" />
+      <workItem from="1625140747721" duration="4232000" />
+      <workItem from="1625146166226" duration="802000" />
+      <workItem from="1625168377085" duration="4667000" />
+      <workItem from="1625230885837" duration="1446000" />
+      <workItem from="1625238556204" duration="3381000" />
+      <workItem from="1625243880905" duration="1138000" />
+      <workItem from="1625256665506" duration="1095000" />
+      <workItem from="1625307825873" duration="4427000" />
+      <workItem from="1625320797341" duration="1652000" />
+      <workItem from="1625322504772" duration="7829000" />
+    </task>
+    <task id="LOCAL-00029" summary="Added Date when the drug store is registered in web app">
+      <created>1619623472752</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1619623472752</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Changed App timezone">
+      <created>1619691454549</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1619691454549</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Drug Stores Banner is not called anymore">
+      <created>1619696621624</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1619696621624</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Seen Statistics are done">
+      <created>1619697950940</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1619697950940</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Fixed Syntaxt bug also added pagination">
+      <created>1619698542213</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1619698542213</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added logo for facebook scaper">
+      <created>1619708454641</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1619708454641</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added Facebook Page Like Button&#10;Also changed pagination">
+      <created>1619908247033</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1619908247033</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Added Contact Messages in Dashboard">
+      <created>1619909851441</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1619909851441</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Update Drug STore file">
+      <created>1619910481287</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1619910481287</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Drug Store fix bug 1">
+      <created>1619910716754</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1619910716754</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Drug Store fix bug 2">
+      <created>1619910828189</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1619910828189</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Fixed Menu Bug">
+      <created>1619911606920</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1619911606920</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Removed Robots">
+      <created>1619914228581</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1619914228581</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Added Orders">
+      <created>1619974325561</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1619974325561</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Fix bug in related products">
+      <created>1620117893154</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1620117893154</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Added Main Photto to slider also">
+      <created>1620118003401</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1620118003401</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Fixing Product Slider">
+      <created>1620118413267</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1620118413267</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Added Categories">
+      <created>1620141124365</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1620141124365</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Added Categories &amp; Filter Products by categories">
+      <created>1620145904401</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1620145904401</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Added request-&gt;q in header form">
+      <created>1620146833049</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1620146833049</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Removed bug in filters">
+      <created>1620146959169</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1620146959169</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Fixed Header Gap">
+      <created>1620147401421</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1620147401421</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Fixed Home Pagination">
+      <created>1620147532658</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1620147532658</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Fixed Drugs Name">
+      <created>1620149863108</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1620149863108</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Stats are now public">
+      <created>1620335429503</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1620335429503</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Added Ads">
+      <created>1620747055070</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1620747055070</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Added Payments 2">
+      <created>1620851672551</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1620851672551</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Added Payments 3">
+      <created>1620852024655</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1620852024655</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Payments Debug 1">
+      <created>1620852101909</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1620852101909</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Payments Debug 2">
+      <created>1620852175604</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1620852175604</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Payments Debug 3">
+      <created>1620852273358</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1620852273358</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Payments Debug 4">
+      <created>1620852376601</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1620852376601</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Payments Debug 5">
+      <created>1620852611659</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1620852611660</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Payments done">
+      <created>1620852904001</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1620852904001</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Removed Counter From Home Stats">
+      <created>1620853797773</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1620853797773</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Added Blog">
+      <created>1621091564878</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1621091564878</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Added Blog 2">
+      <created>1621091767759</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1621091767759</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Added Blog 3">
+      <created>1621092080475</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1621092080475</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Added Blog 4">
+      <created>1621092752164</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1621092752164</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Added Blog 5">
+      <created>1621092907080</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1621092907080</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Comment Image in Store Profile">
+      <created>1621246226790</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1621246226790</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Added possibility to insert drugs for other stores">
+      <created>1621443094874</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1621443094874</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Added possibility to insert drugs for other stores 2">
+      <created>1621443902184</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1621443902184</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Fixed Index Pagination">
+      <created>1621714931366</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1621714931367</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Fixed Index Pagination">
+      <created>1622662906608</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1622662906609</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Fixed Index Pagination">
+      <created>1622980350601</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1622980350604</updated>
+    </task>
+    <task id="LOCAL-00076" summary="D">
+      <branch name="main" repository="C:\xampp\htdocs\Farmaci" original="true" />
+      <branch name="D" repository="C:\xampp\htdocs\Farmaci" />
+      <created>1623761682237</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1623761699605</updated>
+      <workItem from="1623761686049" duration="14000" />
+    </task>
+    <task id="LOCAL-00077" summary="Deleting unaccepted drugs with condition">
+      <created>1623761997735</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1623762026752</updated>
+      <workItem from="1623762004071" duration="23000" />
+    </task>
+    <task id="LOCAL-00078" summary="Fixed Index Pagination">
+      <created>1624203145136</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1624203145136</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
+    <option name="createBranch" value="false" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added request-&gt;q in header form" />
+    <MESSAGE value="Removed bug in filters" />
+    <MESSAGE value="Fixed Header Gap" />
+    <MESSAGE value="Fixed Home Pagination" />
+    <MESSAGE value="Fixed Drugs Name" />
+    <MESSAGE value="Stats are now public" />
+    <MESSAGE value="Added Ads" />
+    <MESSAGE value="Added Payments 2" />
+    <MESSAGE value="Added Payments 3" />
+    <MESSAGE value="Payments Debug 1" />
+    <MESSAGE value="Payments Debug 2" />
+    <MESSAGE value="Payments Debug 3" />
+    <MESSAGE value="Payments Debug 4" />
+    <MESSAGE value="Payments Debug 5" />
+    <MESSAGE value="Payments done" />
+    <MESSAGE value="Removed Counter From Home Stats" />
+    <MESSAGE value="Added Blog" />
+    <MESSAGE value="Added Blog 2" />
+    <MESSAGE value="Added Blog 3" />
+    <MESSAGE value="Added Blog 4" />
+    <MESSAGE value="Added Blog 5" />
+    <MESSAGE value="Comment Image in Store Profile" />
+    <MESSAGE value="Added possibility to insert drugs for other stores" />
+    <MESSAGE value="Added possibility to insert drugs for other stores 2" />
+    <MESSAGE value="Fixed Index Pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Index Pagination" />
+  </component>
+</project>
